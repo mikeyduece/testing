@@ -1,0 +1,14 @@
+// Dependencies
+import React    from 'react'
+import ReactDOM from 'react-dom'
+// Components
+import Root     from 'Root'
+import App      from 'components/App'
+
+ReactDOM.render(
+  <Root>
+    <App />
+  </Root>,
+  document.querySelector('#root')
+)
+
