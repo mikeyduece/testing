@@ -5,8 +5,9 @@ import {
   saveComment,
   fetchComments
 }                          from 'actions'
+import requireAuth         from 'components/requireAuth'
 
-export default () => {
+const CommentBox = () => {
   const [comment, setComment] = useState('')
   const dispatch = useDispatch()
 
@@ -35,3 +36,5 @@ export default () => {
     </div>
   )
 }
+
+export default requireAuth(CommentBox)

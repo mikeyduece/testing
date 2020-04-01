@@ -1,13 +1,20 @@
 // Dependencies
 import React    from 'react'
 import ReactDOM from 'react-dom'
+import {
+  Router,
+  Route
+}               from 'react-router-dom'
+import history  from './history'
 // Components
 import Root     from 'Root'
 import App      from 'components/App'
 
 ReactDOM.render(
   <Root>
-    <App />
+    <Router history={ history }>
+      <Route path='/' component={ App } />
+    </Router>
   </Root>,
   document.querySelector('#root')
 )

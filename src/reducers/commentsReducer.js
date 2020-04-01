@@ -1,7 +1,7 @@
 import {
   SAVE_COMMENT,
   FETCH_COMMENTS
-} from '../actions/types'
+}              from '../actions/types'
 
 export default (state = [], action) => {
   switch (action.type) {

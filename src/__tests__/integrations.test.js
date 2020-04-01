@@ -17,7 +17,7 @@ beforeEach(() => {
 
 afterEach(() => moxios.uninstall())
 
-it('should fetch list of comments and display them', (done) => {
+it('should fetch list of comments and display them', done => {
   const component = mount(
     <Root>
       <App />
@@ -25,7 +25,6 @@ it('should fetch list of comments and display them', (done) => {
   )
 
   component.find('#fetch-comments').simulate('click')
-
   moxios.wait(() => {
     component.update()
     expect(component.find('li').length).toEqual(2)
